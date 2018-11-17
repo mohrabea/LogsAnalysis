@@ -11,12 +11,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation
 
-'''
+```
 https://github.com/mohrabea/logs-analysis.git
-'''
+```
 
 ## Authors
 
-* **Mohammed Rabea** - *Email: moh.rabea@gmail.com* -
+* **Mohammed Rabea** - *Email: moh.rabea@gmail.com* 
 
 
