@@ -5,7 +5,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Requirement
 
-* Operating system (Linux / Windows)
+* #### Operating system (Linux / Windows)
 * [Python 3.x](https://www.python.org/)
 * [PostgreSQL](https://www.postgresql.org/)
 
