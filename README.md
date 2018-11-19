@@ -32,7 +32,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### PreRequisites:
 
-* Operating system (Linux / Windows)
+* #### Operating system (Linux / Windows)
 * [Python 3.x](https://www.python.org/)
 * [VirtualBox](https://www.virtualbox.org/)
 * [Vagrant](https://www.vagrantup.com/)
