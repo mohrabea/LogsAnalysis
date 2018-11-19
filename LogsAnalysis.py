@@ -5,23 +5,6 @@ import psycopg2
 import os
 
 
-def connect(query):
-    """connect to database and Return Query results"""
-    try:
-        db = psycopg2.connect("dbname = news")
-        con = db.cursor()
-        con.execute(query)
-        result = con.fetchall()
-        db.close()
-
-        return result
-
-    except Exception:
-        os.system('clear')
-        print("Error .. Can not connect to database")
-        sys.exit()
-        raise
-
 def get_data(query):
     """connect to database and Return Query results"""
     try:
@@ -38,9 +21,6 @@ def get_data(query):
         print("Error .. Can not connect to database")
         sys.exit()
         raise
-
-
-
 
 
 def report(p_sn):
