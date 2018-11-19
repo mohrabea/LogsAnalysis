@@ -176,17 +176,19 @@ If Vagrant is successfully installed, you will be able to run `vagrant --version
   ```
   git clone https://github.com/mohrabea/logs-analysis.git
   ```
+
+* <h4>Run program</h4>
+  
+  ```
+  $ python3 LogsAnalysis.py
+  ```
+
 ### Output:
 
-![output.txt](https://github.com/mohrabea/logs-analysis/blob/master/output.txt)
+[An example of program output](https://github.com/mohrabea/logs-analysis/blob/master/output.txt)
 
 
-### Running program
-
-```
-$ python3 LogsAnalysis.py
-```
-## Authors
+### Authors
 
 * **Mohammed Rabea** - *Email: moh.rabea@gmail.com* 
 
