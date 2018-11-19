@@ -25,6 +25,51 @@ Here are the questions the reporting tool should answer. The example answers giv
 
 3. On which days did more than 1% of requests lead to errors? The log table includes a column status that indicates the HTTP status code that the news site sent to the user's browser. (Refer to this lesson for more information about the idea of HTTP status codes.)
 
+### Functions in LogsAnalysis.py:
+* **main():** To show a list of 4 options on the Home screen.
+* **get_data(query):** connect to database and Return Query results.
+* **report(p_sn):** Select the Query and sending to get_data() function to get results and printing.
+
+
+### Views Made:
+
+* <h4>popular_articles</h4>
+```sql
+SELECT a.title ,COUNT(log.path) AS views_count 
+FROM articles AS a 
+INNER JOIN log ON a.slug = reverse(split_part"(reverse( log.path ),'/',1)) "
+GROUP BY a.title "
+ORDER BY views_count desc Limit 3;
+```
+* <h4>popular_authors</h4>
+```sql
+SELECT au.name ,COUNT(log.path) AS views_count
+FROM authors AS au 
+INNER JOIN articles AS a ON  a.author = au.id
+INNER JOIN log ON a.slug = reverse(split_part(reverse( log.path ),'/',1)) "
+GROUP BY au.name 
+ORDER BY views_count DESC LIMIT 3;
+```
+
+* <h4>log_status</h4>
+```sql
+SELECT req_err.day_dd , ROUND((req_err.errors_count::numeric /req_ok.ok_count::numeric)*100,1) AS per 
+FROM 
+
+(SELECT to_char(time,'Mon DD YYYY') AS day_dd , COUNT(*) AS errors_count 
+FROM log 
+WHERE status = '404 NOT FOUND' GROUP BY day_dd
+) AS req_err,
+
+(SELECT to_char(time,'Mon DD YYYY') AS day_dd , COUNT(*) AS ok_count 
+FROM log 
+GROUP BY day_dd
+) AS req_ok 
+
+WHERE req_err.day_dd = req_ok.day_dd AND (req_err.errors_count::numeric"/req_ok.ok_count::numeric) *100 >= 1 
+ORDER BY req_err.day_dd ;"
+```
+
 
 ## Getting Started
 
@@ -40,7 +85,7 @@ These instructions will get you a copy of the project up and running on your loc
 * [psycopg2](https://pypi.org/project/psycopg2/)
 
 
-### Installation and Configuration
+### Installation and Configuration Steps
 
 * <h4>Install Python</h4>
 
@@ -96,7 +141,7 @@ If Vagrant is successfully installed, you will be able to run `vagrant --version
 
   ![screen-shot-2016-12-07-at-13.28.31.png](https://d17h27t6h515a5.cloudfront.net/topher/2016/ December/58487f12_screen-shot-2016-12-07-at-13.28.31/screen-shot-2016-12-07-at-13.28.31.png)
 
-  * <h4>Start the virtual machine</h4>
+* <h4>Start the virtual machine</h4>
 
   From your terminal, inside the vagrant subdirectory, run the command `vagrant up`. This will cause Vagrant to download the Linux operating system and install it. This may take quite a while (many minutes) depending on how fast your Internet connection is.
 
@@ -120,7 +165,10 @@ If Vagrant is successfully installed, you will be able to run `vagrant --version
   ![screen-shot-2016-12-07-at-14.46.25.png](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/58489186_screen-shot-2016-12-07-at-14.46.25/screen-shot-2016-12-07-at-14.46.25.png)
 
 
+* <h4>Download the data</h4>
 
+  Next, [download the data here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip). You will need to unzip this file after downloading it. The file inside is called `newsdata.sql`. Put this file into the `vagrant` directory, which is shared with your virtual machine.
+  To load the data, `cd` into the `vagrant` directory and use the command `psql -d news -f newsdata.sql`.
 
 
 
