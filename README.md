@@ -172,7 +172,7 @@ If Vagrant is successfully installed, you will be able to run `vagrant --version
 
 
 * <h4>Download the program</h4>
-  Clone the repository to your local machine or [download zip file](https://github.com/mohrabea/logs-analysis/archive/master.zip).
+  Clone the repository to your local machine or[download zip file](https://github.com/mohrabea/logs-analysis/archive/master.zip).
   	
   ```
   git clone https://github.com/mohrabea/logs-analysis.git
