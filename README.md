@@ -47,11 +47,13 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 $ sudo apt-get install python3.7
 ```
+
 You can run the following command to verify whether Python 3.7 is working:
 
 ```
 $ python3.7 --version
-``
+```
+
 As you can see, it’s working.
 
 * #### Install VirtualBox
@@ -97,7 +99,8 @@ Either way, you will end up with a new directory containing the VM files. Change
 
 
 
-```As you can see, it’s working
+```
+As you can see, it’s working
 https://github.com/mohrabea/logs-analysis.git
 ```
 
