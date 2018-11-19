@@ -172,7 +172,7 @@ If Vagrant is successfully installed, you will be able to run `vagrant --version
 
 
 * <h4>Download the program</h4>
-  Clone the repository to your local machine or [download zip file](https://github.com/SruthiV/Logs-Analysis/archive/master.zip).
+  Clone the repository to your local machine or [download zip file](https://github.com/mohrabea/logs-analysis/archive/master.zip).
   	
   ```
   git clone https://github.com/mohrabea/logs-analysis.git
@@ -182,11 +182,11 @@ If Vagrant is successfully installed, you will be able to run `vagrant --version
   
   ```
   $ python3 LogsAnalysis.py
-  ```https://github.com/SruthiV/Logs-Analysis/archive/master.zip
+  ```
 
 ### Output:
 
-*[An example of program output](https://github.com/mohrabea/logs-analysis/blob/master/output.txt)
+* [An example of program output](https://github.com/mohrabea/logs-analysis/blob/master/output.txt)
 
 
 ### Authors
