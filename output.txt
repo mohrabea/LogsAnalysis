@@ -1,17 +1,31 @@
-An example of program's output. 
+Logs analysis project
+---------------------
 
 
+        List of reports
+        ---------------
+
+        1.The most popular three articles of all time.
+        2.The most popular article authors of all time.
+        3.The days did more than 1% of requests lead to errors.
+        4.Exit/Quit.
+        
+Select the report?.. 
+
+
+Wait a few moments please ..
 
 1.The most popular three articles of all time:
 
 Articles                               Views
 ---------------------------------------------
-Candidate is jerk, alleges rival       338647
-Bears love berries, alleges bear       253801
-Bad things gone, say good people       170098
+Candidate is jerk, alleges rival       338647 
+Bears love berries, alleges bear       253801 
+Bad things gone, say good people       170098 
 ---------------------------------------------
 
 Press enter to continue..
+
 
 
 
@@ -28,13 +42,13 @@ Press enter to continue..
 
 
 
+
 3.The days did more than 1% of requests lead to errors:
 
 Date                         Error percentage
 ---------------------------------------------
-Jul 17 2016                            2.32%
+Jul 17 2016                            2.3 %
 ---------------------------------------------
 
 Press enter to continue..
-
 
