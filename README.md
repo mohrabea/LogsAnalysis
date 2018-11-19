@@ -171,21 +171,22 @@ If Vagrant is successfully installed, you will be able to run `vagrant --version
   To load the data, `cd` into the `vagrant` directory and use the command `psql -d news -f newsdata.sql`.
 
 
-* <h4>Clone the repository to your local machine</h4>
+* <h4>Download the program</h4>
+  Clone the repository to your local machine or [download zip file](https://github.com/SruthiV/Logs-Analysis/archive/master.zip).
   	
   ```
   git clone https://github.com/mohrabea/logs-analysis.git
   ```
 
-* <h4>Run program</h4>
+* <h4>Run the program</h4>
   
   ```
   $ python3 LogsAnalysis.py
-  ```
+  ```https://github.com/SruthiV/Logs-Analysis/archive/master.zip
 
 ### Output:
 
-[An example of program output](https://github.com/mohrabea/logs-analysis/blob/master/output.txt)
+*[An example of program output](https://github.com/mohrabea/logs-analysis/blob/master/output.txt)
 
 
 ### Authors
